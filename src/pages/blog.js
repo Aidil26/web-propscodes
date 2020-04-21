@@ -1,11 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
+import Layout from 'propscode/Layout/index.layout';
+import SEO from 'propscode/Seo';
 
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-
-const SecondPage = () => (
-  <Layout>
+const Blog = () => (
+  <Layout activeLayout='blog'>
     <SEO title="Page two" />
     <h1>Hi from the second page</h1>
     <p>Welcome to page 2</p>
@@ -13,4 +12,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Blog

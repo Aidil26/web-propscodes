@@ -1,0 +1,72 @@
+/* UMUM CONFIGURATION */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+.card:hover {
+  background: #eee;
+  transition-duration: 0.3s;
+}
+
+
+
+.service {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+/* 
+SCROLL COMPONENT 
+*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #b3e5ea;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+/*  END STYLE SCROLLL */
+
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color:#000 !important;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color:#b1e4ea !important;
+}
+
+
+@media screen and (max-width: 480px) {
+  .navbar-toggler-icon {
+    color:#000;
+  }
+}
+
+
