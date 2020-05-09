@@ -1,12 +1,25 @@
 
+const showToggle = (id) => {
+  window.onscroll = () => {
+    if (typeof window !== 'undefined') {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById(id).style.display="block";
+      } else {
+        document.getElementById(id).style.display='none';
+      }
+    }
+  }
+}
+
+
 
 
 
 // ANIMATION SCROLLL NAVIGATION 
-const scrollAnimation = (id) => {
+const scrollAnimation = (id, typeLayout) => {
   if (typeof window !== 'undefined') {
     let prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
+    document.onscroll = function () {
       const maxScroll = document.body.clientHeight - window.innerHeight;
       let currentScrollPos = window.pageYOffset;
       if (
@@ -17,6 +30,9 @@ const scrollAnimation = (id) => {
         document.getElementById(id).classList.add("fixed-top");
         document.getElementById(id).style.transitionDuration= '0.2s';
         document.getElementById(id).style.top = '0px';
+        if (typeLayout != 'general') {
+          document.getElementById('blogs_list').style.marginTop = '70px';
+        }
       } else {
         document.getElementById(id).style.transitionDuration= '0.2s';
         document.getElementById(id).style.top = "-5.0rem"; // adjustable based your need
@@ -27,4 +43,4 @@ const scrollAnimation = (id) => {
 }
 
 
-export default scrollAnimation;
+export { scrollAnimation, showToggle };
